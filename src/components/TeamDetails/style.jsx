@@ -18,9 +18,10 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Header = styled.h1`
+export const Header = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const HomeButton = styled.div`
@@ -34,13 +35,24 @@ export const HomeIcon = styled(SportsSoccerIcon)`
   color: white;
 `;
 
-export const TeamHeaders = styled(List)``;
+export const TeamHeaders = styled(List)`
+  display: flex;
+  flex-direction: column;
+`;
 
 export const TeamHeaderItem = styled(ListItem)``;
 
-export const TeamListItemText = styled(ListItemText)``;
+export const TeamListItemText = styled(ListItemText)`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+`;
 
-export const TeamListItemAvatar = styled(ListItemAvatar)``;
+export const TeamListItemAvatar = styled(ListItemAvatar)`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
 
 export const TeamAvatar = styled(Avatar)``;
 

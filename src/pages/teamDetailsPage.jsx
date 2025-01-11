@@ -5,14 +5,22 @@ import GlobalStyles from "../GlobalStyles";
 
 const TeamDetailsPage = () => {
   const { teamId } = useParams();
-  const { teamName, country, countryFlag, players, yearFounded, sadiumName } =
-    useGetTeamDetails(teamId);
+  const {
+    teamName,
+    teamIcon,
+    country,
+    countryFlag,
+    players,
+    yearFounded,
+    sadiumName,
+  } = useGetTeamDetails(teamId);
 
   return (
     <>
       <GlobalStyles />
       <TeamDetails
         teamName={teamName}
+        teamIcon={teamIcon}
         country={country}
         countryFlag={countryFlag}
         yearFounded={yearFounded}

@@ -4,6 +4,7 @@ import * as S from "./style";
 
 const teamDetails = ({
   teamName,
+  teamIcon,
   country,
   countryFlag,
   players,
@@ -18,11 +19,16 @@ const teamDetails = ({
         </S.HomeButton>
       </Link>
       <S.Container>
-        <S.Header>{teamName}</S.Header>
+        <S.Header>
+          <S.TeamListItemAvatar>
+            <S.TeamListItemText primary={teamName}></S.TeamListItemText>
+            <img src={teamIcon} alt={teamName} width={100} />
+          </S.TeamListItemAvatar>
+        </S.Header>
         <S.TeamHeaders>
           <S.TeamHeaderItem>
             <S.TeamListItemAvatar>
-              <img src={countryFlag} alt={country} width={30}></img>
+              <img src={countryFlag} alt={country} width={30} />
             </S.TeamListItemAvatar>
             <S.TeamListItemText
               primary="Country"
