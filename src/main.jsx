@@ -4,9 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/FootballTeamsInfo/">
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter basename="/">
+    <App />
+  </BrowserRouter>
 );
