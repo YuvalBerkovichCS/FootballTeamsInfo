@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import List from "@mui/material/List";
+import TextField from "@mui/material/TextField";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 
 export const FavoritesList = styled(List)`
@@ -24,4 +25,14 @@ export const Header = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const SearchBar = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+`;
+
+export const SearchInput = styled(TextField)`
+  margin-bottom: 100px;
 `;

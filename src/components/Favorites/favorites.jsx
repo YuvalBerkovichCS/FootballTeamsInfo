@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TeamListItem from "../TeamListItem";
 import { Link } from "react-router-dom";
 import useFavoriteTeams from "../../hooks/useFavoriteTeams";
@@ -5,8 +6,15 @@ import useFavoriteTeams from "../../hooks/useFavoriteTeams";
 import * as S from "./style";
 
 const Favorites = () => {
-  const { handleFavoriteClick, favorites } = useFavoriteTeams();
-
+  const { handleFavoriteClick, favorites, setFavorites } = useFavoriteTeams();
+  const [filteredFavorites, setfilteredFavorites] = useState(favorites);
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    const filteredFavorites = favorites.filter((favorite) => {
+      return favorite.name.toLowerCase().includes(value.toLowerCase());
+    });
+    setfilteredFavorites(filteredFavorites);
+  };
   return (
     <>
       <Link to={"/"}>
@@ -15,8 +23,16 @@ const Favorites = () => {
         </S.HomeButton>
       </Link>
       <S.Header>Favorite Teams</S.Header>
+      <S.SearchBar>
+        <S.SearchInput
+          id="filled-basic"
+          label="Filter Favorite Teams"
+          variant="filled"
+          onChange={handleSearch}
+        />
+      </S.SearchBar>
       <S.FavoritesList>
-        {favorites.map((team) => {
+        {filteredFavorites.map((team) => {
           return (
             <TeamListItem
               key={team.id}
