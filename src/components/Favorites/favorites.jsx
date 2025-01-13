@@ -24,11 +24,20 @@ const Favorites = () => {
       </Link>
       <S.Header>Favorite Teams</S.Header>
       <S.SearchBar>
-        <S.SearchInput
-          id="filled-basic"
-          label="Filter Favorite Teams"
-          variant="filled"
+        <S.SearchText
           onChange={handleSearch}
+          id="input-with-icon-textfield"
+          label="Search inside Favorite Teams"
+          slotProps={{
+            input: {
+              startAdornment: (
+                <S.SearchInputAdornment position="start">
+                  <S.SearchTeamIcon />
+                </S.SearchInputAdornment>
+              ),
+            },
+          }}
+          variant="standard"
         />
       </S.SearchBar>
       <S.FavoritesList>
