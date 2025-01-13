@@ -1,7 +1,7 @@
 import * as S from "./style";
 import PlayerIcon from "../../assets/icons/playerAvatar.png";
 
-const teamPlayersList = ({ playersList }) => {
+const TeamPlayersList = ({ playersList }) => {
   return (
     <>
       <S.PlayersList>
@@ -23,4 +23,4 @@ const teamPlayersList = ({ playersList }) => {
     </>
   );
 };
-export default teamPlayersList;
+export default TeamPlayersList;

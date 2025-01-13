@@ -4,7 +4,7 @@ import useFavoriteTeams from "../../hooks/useFavoriteTeams";
 
 import * as S from "./style";
 
-const favorites = () => {
+const Favorites = () => {
   const { handleFavoriteClick, favorites } = useFavoriteTeams();
 
   return (
@@ -33,4 +33,4 @@ const favorites = () => {
   );
 };
 
-export default favorites;
+export default Favorites;

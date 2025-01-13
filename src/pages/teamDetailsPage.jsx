@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import useGetTeamDetails from "../hooks/useGetTeamDetails";
+import useFetchTeamDetails from "../hooks/useFetchTeamDetails";
 import TeamDetails from "../components/TeamDetails";
 import GlobalStyles from "../GlobalStyles";
 
@@ -13,7 +13,7 @@ const TeamDetailsPage = () => {
     players,
     yearFounded,
     sadiumName,
-  } = useGetTeamDetails(teamId);
+  } = useFetchTeamDetails(teamId);
 
   return (
     <>

@@ -3,8 +3,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
+const basename =
+  import.meta.env.MODE === "production" ? "/FootballTeamsInfo" : "/";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/FootballTeamsInfo">
+  <BrowserRouter basename={basename}>
     <App />
   </BrowserRouter>
 );

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useGetAllTeams = () => {
+const useFetchTeams = () => {
   const [offset, setOffset] = useState(1);
   const [teams, setTeams] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -45,4 +45,4 @@ const useGetAllTeams = () => {
   return { isLoading, error, teams, hasMore, offset, setOffset };
 };
 
-export default useGetAllTeams;
+export default useFetchTeams;

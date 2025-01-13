@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useGetTeamDetails = (teamId) => {
+const useFetchTeamDetails = (teamId) => {
   const [teamName, setTeamName] = useState("");
   const [country, setCountry] = useState("");
   const [countryFlag, setCountryFlag] = useState("");
@@ -44,4 +44,4 @@ const useGetTeamDetails = (teamId) => {
   };
 };
 
-export default useGetTeamDetails;
+export default useFetchTeamDetails;

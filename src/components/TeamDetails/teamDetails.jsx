@@ -2,7 +2,7 @@ import TeamPlayersList from "../TeamPlayersList";
 import { Link } from "react-router-dom";
 import * as S from "./style";
 
-const teamDetails = ({
+const TeamDetails = ({
   teamName,
   teamIcon,
   country,
@@ -59,4 +59,4 @@ const teamDetails = ({
     </>
   );
 };
-export default teamDetails;
+export default TeamDetails;

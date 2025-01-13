@@ -1,13 +1,13 @@
 import { React, useRef, useCallback } from "react";
 import TeamListItem from "../TeamListItem";
-import useGetAllTeams from "../../hooks/useGetAllTeams";
+import useFetchTeams from "../../hooks/useFetchTeams";
 import useFavoriteTeams from "../../hooks/useFavoriteTeams";
 import { Link } from "react-router-dom";
 
 import * as S from "./style";
 
 const TeamsList = () => {
-  const { teams, hasMore, isLoading, error, setOffset } = useGetAllTeams();
+  const { teams, hasMore, isLoading, error, setOffset } = useFetchTeams();
   const { favorites, setFavorites, favoritesTeamsIds, handleFavoriteClick } =
     useFavoriteTeams(teams);
   const observer = useRef();
