@@ -7,7 +7,7 @@ const useGetTeamDetails = (teamId) => {
   const [countryFlag, setCountryFlag] = useState("");
   const [players, setPlayers] = useState([]);
   const [yearFounded, setYearFounded] = useState(1921);
-  const [sadiumName, setSadiumName] = useState("");
+  const [stadiumName, setstadiumName] = useState("");
   const [teamIcon, setTeamIcon] = useState("");
   useEffect(() => {
     const getTeamDetails = async () => {
@@ -24,7 +24,7 @@ const useGetTeamDetails = (teamId) => {
         setCountryFlag(data.area.flag);
         setPlayers(data.squad);
         setYearFounded(data.founded);
-        setSadiumName(data.venue);
+        setstadiumName(data.venue);
         setTeamIcon(data.crest);
       } catch (error) {
         console.error("Error fetching team details:", error.message);
@@ -40,7 +40,7 @@ const useGetTeamDetails = (teamId) => {
     countryFlag,
     players,
     yearFounded,
-    sadiumName,
+    stadiumName,
   };
 };
 
