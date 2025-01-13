@@ -18,5 +18,5 @@ node_modules
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
+*.sln 
 *.sw?
