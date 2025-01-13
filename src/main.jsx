@@ -4,7 +4,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/">
+  <BrowserRouter basename="/FootballTeamsInfo">
+    2222
     <App />
   </BrowserRouter>
 );
