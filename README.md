@@ -20,10 +20,12 @@ Follow these steps to set up the project on your local machine:
 
 3. **Install dependencies:**
   npm install
+
   ![image](https://github.com/user-attachments/assets/c1926e34-8b56-4dbf-84b4-9c6bd3612f4e)
   
 4. **Start the development server:**
   npm run dev
+
   ![image](https://github.com/user-attachments/assets/917b2812-b45c-480d-8356-854fdefe8a9e)
 
 The application should now be running at http://localhost:5173
