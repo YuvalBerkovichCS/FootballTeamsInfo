@@ -32,7 +32,6 @@ const TeamsList = () => {
     [isLoading, hasMore]
   );
 
-  console.log({ favoritesTeamsIds });
   return (
     <>
       <Link to={"/favorites"}>
@@ -44,10 +43,6 @@ const TeamsList = () => {
       <S.TeamsBox>
         <S.TeamsList>
           {teams.map(({ teamId, teamName, teamIconLink }, index) => {
-            console.log({
-              teamId,
-              isFavorite: favoritesTeamsIds.includes(teamId),
-            });
             return (
               <TeamListItem
                 ref={numberOfTeams === index + 1 ? lastTeamsElementRef : null}

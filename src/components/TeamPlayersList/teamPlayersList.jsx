@@ -7,8 +7,6 @@ const teamPlayersList = ({ playersList }) => {
       <S.PlayersList>
         <h1>Players</h1>
         {playersList.map((player) => {
-          console.log({ player });
-
           return (
             <S.PlayerItem key={player.id}>
               <S.PlayerAvatarListItem>
@@ -18,7 +16,6 @@ const teamPlayersList = ({ playersList }) => {
                 primary={player.name}
                 secondary={player.position}
               ></S.PlayerName>
-              
             </S.PlayerItem>
           );
         })}

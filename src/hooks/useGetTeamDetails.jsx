@@ -12,9 +12,12 @@ const useGetTeamDetails = (teamId) => {
   useEffect(() => {
     const getTeamDetails = async () => {
       try {
-        const response = await axios.get(`/api/v4/teams/${teamId}`, {
-          headers: { "X-Auth-Token": "1a26fca56b2245c086502edbbe3ff425" },
-        });
+        const response = await axios.get(
+          `https://proxy-server-api-ubut.onrender.com/api/teams/${teamId}`,
+          {
+            headers: { "X-Auth-Token": "1a26fca56b2245c086502edbbe3ff425" },
+          }
+        );
         const data = response.data;
         setTeamName(data.shortName);
         setCountry(data.area.name);

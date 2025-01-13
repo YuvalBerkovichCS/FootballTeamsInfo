@@ -15,10 +15,14 @@ const useGetAllTeams = () => {
   async function fetchTeams(offset) {
     setIsLoading(true);
     try {
-      const response = await axios.get("/api/v4/teams", {
-        headers: { "X-Auth-Token": "1a26fca56b2245c086502edbbe3ff425" },
-        params: { limit: 50, offset },
-      });
+      const response = await axios.get(
+        `https://proxy-server-api-ubut.onrender.com/api/teams`,
+        {
+          headers: { "X-Auth-Token": "1a26fca56b2245c086502edbbe3ff425" },
+          params: { limit: 50, offset },
+        }
+      );
+      console.log("Fetched Data:", response.data);
       const teamsData = response.data.teams;
       const newTeams = teamsData.map((teamData) => {
         const teamName = teamData.name;

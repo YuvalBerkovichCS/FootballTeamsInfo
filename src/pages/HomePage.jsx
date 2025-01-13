@@ -1,9 +1,10 @@
-import App from "../App";
+import GlobalStyles from "../GlobalStyles";
 import TeamsList from "../components/TeamsList";
 
 const HomePage = () => {
   return (
     <>
+      <GlobalStyles />
       <TeamsList />
     </>
   );
